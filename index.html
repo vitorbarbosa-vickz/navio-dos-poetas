@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styless.css">
+    <title>Navio dos poetas</title>
+</head>
+<body>
+    <header>
+  <h1>Navio dos poetas</h1>
+    </header>
+    <main>
+        <section>
+            <input type="text" placeholder="buscar autor ou obra" id="campo-pesquisa">
+            <button onclick="pesquisar()">pesquisar</button> 
+        </section>
+        <section class="resultados-pesquisa"
+        id="resultados-pesquisa">
+    
+           <!-- <div class="item-resultado">
+                <h2> <a href="https://www.youtube.com/watch?v=riIaJ_k8OWs" target="_blank"> Machado de Assis </a>(1839-1908)</h2>
+                <p class="discricao-meta">Considerado por muitos o maior escritor brasileiro, 
+                     Machado de Assis se destacou por sua prosa refinada e análise psicológica profunda de seus personagens.
+                     Suas obras, como "Dom Casmurro" e "Memórias Póstumas de Brás Cubas", são clássicos da literatura brasileira e universal.
+                     Machado de Assis foi pioneiro em explorar temas como a hipocrisia, a ambição e a complexidade da natureza humana.</p>
+                <a href="https://pt.wikipedia.org/wiki/Machado_de_Assis" target="_blank">mais informações</a>
+            </div>
+            <div class="item-resultado">
+                <h2> <a href="https://www.youtube.com/watch?v=toAOn-quo3s" target="_blank"> Graciliano Ramos </a>(1892-1953)</h2>
+                <p class="discricao-meta">Realista e engajado socialmente, Graciliano Ramos retratou a vida do sertanejo nordestino com crueza e simplicidade.
+                     Suas obras, como "Vidas Secas" e "São Bernardo", são marcadas por um forte senso de denúncia social.
+                      Ramos explorou temas como a miséria, a injustiça e a luta pela sobrevivência.</p>
+                <a href="https://pt.wikipedia.org/wiki/Graciliano_Ramos" target="_blank">mais informações</a>
+            </div>
+            
+            <div class="item-resultado">
+                <h2> <a href="https://www.youtube.com/watch?v=CWagtQP7hqw" target="_blank"> Carlos Drummond de Andrade </a>(1902-1987)</h2>
+                <p class="discricao-meta">Um dos maiores poetas brasileiros, Drummond é conhecido por sua poesia existencialista e crítica social.
+                     Seus poemas, como "Sentimento do Mundo" e "Rosa do Povo", abordam temas como a solidão, a morte, o amor e a esperança.
+                      Drummond é considerado um dos principais representantes da poesia modernista brasileira.</p>
+                <a href="https://pt.wikipedia.org/wiki/Carlos_Drummond_de_Andrade" target="_blank">mais informações</a>
+            </div>
+            
+            <div class="item-resultado">
+                <h2> <a href="https://www.youtube.com/watch?v=kw9fUfy5sPk" target="_blank"> Clarice Lispector </a>(1920-1977)</h2>
+                <p class="discricao-meta">Escritora inovadora e experimental, Clarice Lispector mergulhou na subjetividade e no universo interior de seus personagens.  Suas obras, como "A Hora da Estrela" e "A Paixão Segundo G.H.", são marcadas por uma linguagem rica e poética. Lispector explorou temas como a existência, a identidade e a condição humana.</p>
+                <a href="https://pt.wikipedia.org/wiki/Clarice_Lispector" target="_blank">mais informações</a>
+            </div>
+           
+            <div class="item-resultado">
+                <h2> <a href="https://www.youtube.com/watch?v=v9CbLYE-T3k" target="_blank"> Guimarães Rosa </a>(1908-1967)</h2>
+                <p class="discricao-meta">Um dos maiores nomes da literatura brasileira, Guimarães Rosa é conhecido por sua linguagem rica e inovadora, marcada por neologismos e regionalismos. Suas obras, como "Grande Sertão: Veredas" e "Cortiço", são consideradas marcos da literatura brasileira moderna. Rosa explorou temas como a identidade nacional, a violência e a busca pela transcendência.</p>
+                <a href="https://pt.wikipedia.org/wiki/Guimar%C3%A3es_Rosa" target="_blank">mais informações</a>
+            </div>
+
+            <div class="item-resultado">
+                <h2><a href="https://www.youtube.com/watch?v=seu_link_aqui" target="_blank">Ariano Suassuna</a> (1927-2014)</h2>
+                <p class="descricao-meta">Dramaturgo, poeta e romancista, Ariano Suassuna é um dos maiores nomes do teatro brasileiro. Suas obras, como "O Auto da Compadecida", misturam elementos da cultura popular nordestina com a tradição literária, utilizando uma linguagem simples e direta.</p>
+                <a href="https://pt.wikipedia.org/wiki/Ariano_Suassuna" target="_blank">mais informações</a>
+            </div>
+
+            <div class="item-resultado">
+                <h2><a href="https://www.youtube.com/watch?v=Fq0zC9r_Ev4" target="_blank">Mário de Andrade</a> (1893-1945)</h2>
+                <p class="descricao-meta">Um dos principais nomes do Modernismo brasileiro, Mário de Andrade revolucionou a literatura com a valorização da cultura popular e da língua falada. Suas obras, como "Macunaíma" e "Paulicéia Desvairada", são consideradas marcos da literatura brasileira.</p>
+                <a href="https://pt.wikipedia.org/wiki/Mário_de_Andrade" target="_blank">mais informações</a>
+            </div>
+
+            <div class="item-resultado">
+                <h2><a href="https://www.youtube.com/watch?v=bEBtcq-4xfo" target="_blank">Manuel Bandeira</a> (1886-1968)</h2>
+                <p class="descricao-meta">Um dos maiores poetas brasileiros, Manuel Bandeira abordou temas como a identidade nacional, a religiosidade e a morte. Seus poemas são marcados por uma linguagem simples e direta, e por uma grande sensibilidade.</p>
+                <a href="https://pt.wikipedia.org/wiki/Manuel_Bandeira" target="_blank">mais informações</a>
+            </div>
+
+            <div class="item-resultado">
+                <h2><a href="https://www.youtube.com/watch?v=ItllhYhQR4Q" target="_blank">Paulo Coelho</a> (1947-)</h2>
+                <p class="descricao-meta">Um dos escritores brasileiros mais lidos no mundo, Paulo Coelho aborda temas como a busca espiritual e a realização pessoal. Suas obras, como "O Alquimista" e "O Diário de um Mago", são best-sellers internacionais.</p>
+                <a href="https://pt.wikipedia.org/wiki/Paulo_Coelho" target="_blank">mais informações</a>
+            </div>
+
+          
+                <div class="item-resultado">
+                    <h2><a href="https://www.youtube.com/watch?v=O2bxQJH-Plk" target="_blank">Conceição Evaristo</a> (1946-)</h2>
+                    <p class="descricao-meta">Uma das principais escritoras negras brasileiras, Conceição Evaristo aborda temas como o racismo, o machismo e a desigualdade social. Suas obras, como "O Olho d'água" e "A Outra Face da Lua", são marcadas por uma linguagem poética e uma profunda reflexão sobre a experiência negra no Brasil.</p>
+                    <a href="https://pt.wikipedia.org/wiki/Conceição_Evaristo" target="_blank">mais informações</a>
+                  </div>
+          
+                  <div class="item-resultado">
+                    <h2><a href="https://www.youtube.com/watch?v=RLEZK0rwBEo" target="_blank">Ana Maria Machado</a> (1941-)</h2>
+                    <p class="descricao-meta">Uma das principais autoras de literatura infantil e juvenil no Brasil, Ana Maria Machado é conhecida por suas histórias que abordam temas como a identidade, a amizade e a diversidade cultural. Suas obras, como "A Menina Bonita do Laço de Fita" e "O Pequeno Elefante", são marcadas por uma linguagem simples e divertida, que encanta crianças e adultos. Ana Maria Machado também se destaca por sua luta pelos direitos da criança e pela promoção da leitura.</p>
+                    <a href="https://pt.wikipedia.org/wiki/Ana_Maria_Machado" target="_blank">mais informações</a>
+                  </div>
+
+                  <div class="item-resultado">
+                    <h2><a href="https://www.youtube.com/watch?v=zzCoEwnI-Ek" target="_blank">Rachel de Queiroz</a> (1910-2003)</h2>
+                    <p class="descricao-meta">Considerada uma das pioneiras da literatura feminina no Brasil, Rachel de Queiroz se destacou por sua prosa realista e engajada. Suas obras, como "O Quinze", retratam a vida no sertão nordestino com crueza e sensibilidade, abordando temas como a seca, a miséria e a luta pela sobrevivência. Sua escrita, marcada por uma linguagem simples e direta, contribuiu para a renovação da literatura brasileira.</p>
+                    <a href="https://pt.wikipedia.org/wiki/Rachel_de_Queiroz" target="_blank">mais informações</a>
+                  </div>
+
+                  <div class="item-resultado">
+                    <h2><a href="https://www.youtube.com/watch?v=nWytcVyXcIs" target="_blank">Cecília Meireles</a> (1901-1964)</h2>
+                    <p class="descricao-meta">Poeta lírica e sensível, Cecília Meireles é uma das mais importantes figuras da literatura brasileira. Sua obra poética, marcada por um intenso lirismo e uma linguagem musical, explora temas como a natureza, o amor, a morte e a espiritualidade. Com uma vasta produção literária, que inclui poemas, contos e crônicas, Cecília Meireles deixou um legado inestimável para a cultura brasileira.</p>
+                    <a href="https://pt.wikipedia.org/wiki/Cecília_Meireles" target="_blank">mais informações</a>
+                  </div>
+
+                  <div class="item-resultado">
+                    <h2><a href="https://www.youtube.com/watch?v=vaiDv10e_4A" target="_blank">Jorge Amado</a> (1912-2001)</h2>
+                    <p class="descricao-meta">Conhecido por seus romances sobre a Bahia, Jorge Amado abordou temas como a desigualdade social e a luta por justiça. Suas obras, como "Gabriela, Cravo e Canela" e "Capitães da Areia", são clássicos da literatura brasileira e retratam a vida do povo baiano com paixão e realismo.</p>
+                    <a href="https://pt.wikipedia.org/wiki/Jorge_Amado" target="_blank">mais informações</a>
+                  </div> -->
+         
+                
+        </section>
+    </main>
+    <footer>
+        <p>Navio dos poetas - todos os direitos resevados</p>
+        <p>2024</p>
+    </footer>
+    <script src="dados.js"></script>
+    <script src="app.js"></script> 
+</body>
+</html>
